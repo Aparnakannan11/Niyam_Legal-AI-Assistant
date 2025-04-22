@@ -5,20 +5,14 @@ Niyam is a web application that provides users with access to legal information 
 ## Features
 
 * **User Authentication:** Users can register and log in to access the application.
-    * *(Optional: Add a screenshot of the Login/Register UI here)*
-        ```markdown
-        ![Login/Register UI](assets/readme_images/auth_ui.png)
-        ```
+    ![niyam-1](https://github.com/user-attachments/assets/a0daee18-88a0-490a-9c34-3b3f82f64785)
+
 * **Chatbot:** An AI-powered chatbot assists users with legal queries related to Indian law (IPC, labor laws, etc.).
-    * *(Add a screenshot of the chatbot interface)*
-        ```markdown
-        ![Chatbot Interface](assets/readme_images/chatbot_ui.png)
-        ```
+    ![niyam-2](https://github.com/user-attachments/assets/6627227c-56b9-4922-8186-61188ad45f8f)
+
 * **Legal Documents:** A collection of downloadable and printable legal document templates.
-    * *(Optional: Add a preview of a document template)*
-        ```markdown
-        ![Document Template Preview](assets/readme_images/document_preview.png)
-        ```
+    ![niyam-3](https://github.com/user-attachments/assets/42d0b414-055e-46f7-bcae-acc1924c5fce)
+
 * **Password Reset:** Users can reset their passwords if forgotten.
 * **User Feedback:** Users can rate their experience.
 
@@ -99,5 +93,3 @@ Niyam is a web application that provides users with access to legal information 
 * **Ollama Setup:** Ensure that Ollama is correctly configured and running with the necessary models. The backend's performance is heavily dependent on Ollama.
 * **Translation:** The chatbot page has initial support for translations using i18next. You can expand this to other parts of the application.
 * **Google Login:** Make sure you have correctly configured your Google OAuth credentials.
-
-## File Structure
