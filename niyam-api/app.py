@@ -6,7 +6,8 @@ from google.oauth2 import id_token
 from google.auth.transport import requests as google_requests
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"], supports_credentials=True)
+# Update CORS to include both local and Vercel URLs
+CORS(app, origins=["http://localhost:3000", "https://niyam-react-app.vercel.app"], supports_credentials=True)
 
 # Simulated user database
 users = {"ap11@gmail.com": "password123"}
@@ -18,25 +19,8 @@ Your job is to provide clear, accessible legal guidance to everyday users who ma
 """
 
 def query_ollama(user_prompt):
-    try:
-        response = requests.post(
-            "http://localhost:11434/api/chat",
-            headers={"Content-Type": "application/json"},
-            data=json.dumps({
-                "model": "gemma:2b",
-                "messages": [
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt}
-                ],
-                "stream": False
-            })
-        )
-        if response.status_code == 200:
-            return response.json()["message"]["content"]
-        else:
-            return f"Error: {response.status_code} - {response.text}"
-    except Exception as e:
-        return f"Error: Failed to connect to Ollama service - {str(e)}"
+    # Mocked response since Ollama isn't cloud-hosted yet
+    return "Mock legal advice response for: " + user_prompt
 
 @app.route('/api/query', methods=['POST'])
 def get_legal_advice():
